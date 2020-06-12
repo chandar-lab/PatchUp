@@ -233,7 +233,6 @@ def copy_script_to_folder(caller_path, folder):
     # Copying script
     shutil.copy(caller_path, script_relative_path)
 
-#PR_2
 
 
 

@@ -56,5 +56,3 @@ class DropBlock(nn.Module):
         mask = 1 - F.max_pool2d(m_i_j, self.kernel_size, self.stride, self.padding)
         # Normalize the features according to the DorpBlock algorithm described in the DropBlock paper.
         return mask * x * (mask.numel() / mask.sum())
-
-#PR

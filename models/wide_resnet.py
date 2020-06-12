@@ -215,7 +215,6 @@ class Wide_ResNet(nn.Module):
 
 
 def wrn28_10(num_classes=10, dropout=False, per_img_std=False, stride=1, drop_block=7, keep_prob=.9, gamma=.9, patchup_block=7):
-    # print ('this')
     model = Wide_ResNet(depth=28, widen_factor=10, num_classes=num_classes, per_img_std=per_img_std, stride=stride,
                         drop_block=drop_block, keep_prob=keep_prob, gamma=gamma, patchup_block=patchup_block)
     return model
@@ -225,5 +224,3 @@ def wrn28_2(num_classes=10, dropout=False, per_img_std=False, stride=1, patchup_
     model = Wide_ResNet(depth=28, widen_factor=2, num_classes=num_classes, per_img_std=per_img_std, stride=stride,
                         drop_block=drop_block, keep_prob=keep_prob, gamma=gamma, patchup_block=patchup_block)
     return model
-
-#PR

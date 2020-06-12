@@ -80,6 +80,10 @@ class PreActBottleneck(nn.Module):
 
 
 class PreActResNet(nn.Module):
+    """
+    In this implementation PreActResNet consist of a Convolutional module followed
+    by 4 residual blocks and a fully connected layer for classification.
+    """
     def __init__(self, block, num_blocks, initial_channels, num_classes, per_img_std= False, stride=1, drop_block=7,
                  keep_prob=.9, gamma=.9, patchup_block=7):
         super(PreActResNet, self).__init__()
@@ -89,8 +93,6 @@ class PreActResNet(nn.Module):
         self.keep_prob = keep_prob
         self.gamma = gamma
         self.patchup_block = patchup_block
-
-        #import pdb; pdb.set_trace()
         self.dropblock = DropBlock(block_size=drop_block, keep_prob=keep_prob)
         self.conv1 = nn.Conv2d(3, initial_channels, kernel_size=3, stride=stride, padding=1, bias=False)
         self.patchup_0 = PatchUp(block_size=self.patchup_block, gamma=self.gamma)
@@ -247,6 +249,3 @@ def preactresnet34(num_classes=10, dropout = False, per_img_std = False, stride=
                    patchup_block=7, patchup_prob=.7):
     return PreActResNet(PreActBlock, [3,4,6,3], 64, num_classes, per_img_std, stride= stride, drop_block=drop_block,
                         keep_prob=keep_prob, gamma=gamma, patchup_block=patchup_block)
-
-
-#PR

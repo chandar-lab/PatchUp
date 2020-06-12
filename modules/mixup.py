@@ -39,5 +39,3 @@ def get_lambda(alpha=1.0):
     else:
         lam = 1.
     return lam
-
-#PR

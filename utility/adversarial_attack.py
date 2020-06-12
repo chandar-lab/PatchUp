@@ -86,5 +86,3 @@ def run_test_adversarial(net, loader, epsilon):
     t_accuracy = 100. * correct * 1.0 / total
     t_loss = t_loss / total
     return t_accuracy, t_loss
-
-#PR

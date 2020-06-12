@@ -56,5 +56,3 @@ class Cutout(object):
         mask = mask.expand_as(img).to(device)
         img = img * mask
         return img
-
-#PR

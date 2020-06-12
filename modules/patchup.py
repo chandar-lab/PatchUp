@@ -17,7 +17,7 @@ class PatchUp(nn.Module):
     """
     PatchUp Module.
 
-    This module is responsible to apply either Soft PatchUp or Hard PatchUp after a convolutional module
+    This module is responsible for applying either Soft PatchUp or Hard PatchUp after a Convolutional module
     or convolutional residual block.
     """
     def __init__(self, block_size=7, gamma=0.9, patchup_type=PatchUpMode.SOFT):
@@ -136,6 +136,5 @@ class PatchUp(nn.Module):
         target_a = targets
         return target_a, target_b, target_reweighted, x, total_unchanged_portion
 
-#PR
 
 

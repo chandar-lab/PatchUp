@@ -19,7 +19,7 @@ Following image briefly describes how PatchUp works. It is the PatchUp process f
 
 ### Citation:
 
-If you find this work useful and use it in your own research, please citing our [paper](http://google.com).
+If you find this work useful and use it in your own research, please consider citing our [paper](http://google.com).
 ```
 
 ```
@@ -227,17 +227,17 @@ Note: To run the cutout experiment on SVHN, you should  also set --cutout 20
 
 # Experiments on Deformed Images
 
-First, we have to creat a affine transformed test set. With simply run the following command:
+First, we need to create an affine transformed test set by running the following command:
 ```
 python ./load_data.py --affine_path ./data/test/affine/
 ```
-I creates affine transformed test set described in the paper for the CIFAR-100.
+We create affine transformed test set described in the paper for the CIFAR-100.
 After creating the the Deformed Images test set, 
 we can run generalization experiment on Deformed Images (affine transformed test set) with same commands to train model with a regularization technique with two more parameters. Following is one command example that is used in Soft PatchUp.
 ```
 python ./main.py --dataset cifar100 --data_dir ./data/cifar100/ --affine_test --affine_path ./data/test/affine/  --root_dir ./experiments/patchup/soft/ --labels_per_class 500 --valid_labels_per_class 50 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train patchup --alpha 2.0 --patchup_type soft --patchup_block 7 --patchup_prob 1.0 --gamma 0.25 --job_id <JobID>
 ```
-Note: Use above as an example command for running experiment on evaluating other approaches performance.
+Note: Use the above as a pattern to create a command to run an experiment for evaluating the performance of other approaches in this task.
 <br/>
 <hr/>
 <br/>
@@ -247,15 +247,12 @@ Note: Use above as an example command for running experiment on evaluating other
 in order to see the regularized models' robustness against the FGSM attack, we can use following parameter:
 * --fsgm_attack True
 
-Following is an example of command that runs this experiment for training PreActResNet18 on CIFAR-10 with Soft PatchUp and evaluate its robustness against FGSM attack.
+The following command runs this experiment on PreActResNet18 in CIFAR-10 with Soft PatchUp and evaluate its robustness against the FGSM attack.
 ```
 python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --fsgm_attack True --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train patchup --alpha 2.0 --patchup_type soft --patchup_block 7 --patchup_prob 1.0 --gamma 0.25 --job_id <JobID>
 ```
 Note: Use above as an example command for running experiment on evaluating other approaches performance.
 
-```shell script
-PR - versions
-```
 
 
 

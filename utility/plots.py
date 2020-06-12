@@ -52,5 +52,3 @@ def plotting(exp_dir):
    
 if __name__ == '__main__':
     plotting('temop')
-
-#PR_2

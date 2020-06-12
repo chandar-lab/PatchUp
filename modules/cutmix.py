@@ -43,5 +43,3 @@ class CutMix(object):
         lam = 1 - ((bbx2 - bbx1) * (bby2 - bby1) / (inputs.size()[-1] * inputs.size()[-2]))
         # compute output
         return target_a, target_b, inputs, lam
-
-#PR
