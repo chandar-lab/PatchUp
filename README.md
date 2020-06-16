@@ -61,12 +61,12 @@ For PreActResent models you can run the following command.
 
 Note: X is either preactresnet18 or preactresnet34 and at the end JobID is your job id. 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train patchup --alpha 2.0 --patchup_type soft --patchup_block 7 --patchup_prob 1.0 --gamma 0.75 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train patchup --alpha 2.0 --patchup_type soft --patchup_block 7 --patchup_prob 1.0 --gamma 0.75 --job_id <JobID>
 ```
 For WideResNet-28-10:
 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train patchup --alpha 2.0 --patchup_type soft --patchup_block 7 --patchup_prob 1.0 --gamma 0.75 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train patchup --alpha 2.0 --patchup_type soft --patchup_block 7 --patchup_prob 1.0 --gamma 0.75 --job_id <JobID>
 ```
 
 #### Hard PatchUp:
@@ -76,13 +76,13 @@ For PreActResent models you can run the following command.
 Note: X is either preactresnet18 or preactresnet34 and at the end JobID is your job id. 
 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/hard/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train patchup --alpha 2.0 --patchup_type hard --patchup_block 7 --patchup_prob 0.7 --gamma 0.5 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/hard/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train patchup --alpha 2.0 --patchup_type hard --patchup_block 7 --patchup_prob 0.7 --gamma 0.5 --job_id <JobID>
 ```
 
 For WideResNet-28-10:
 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train patchup --alpha 2.0 --patchup_type hard --patchup_block 7 --patchup_prob 0.7 --gamma 0.5 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train patchup --alpha 2.0 --patchup_type hard --patchup_block 7 --patchup_prob 0.7 --gamma 0.5 --job_id <JobID>
 ```
 <br/>
 <hr/>
@@ -96,12 +96,12 @@ For PreActResent models you can run the following command.
 
 Note: X is either preactresnet18 or preactresnet34 and at the end JobID is your job id. 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/manifold/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train manifold_mixup --alpha 1.5 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/manifold/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train manifold_mixup --alpha 1.5 --job_id <JobID>
 ```
 For WideResNet-28-10:
 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train manifold_mixup --alpha 1.5 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train manifold_mixup --alpha 1.5 --job_id <JobID>
 ```
 <br/>
 <hr/>
@@ -115,12 +115,12 @@ For PreActResent models you can run the following command.
 
 Note: X is either preactresnet18 or preactresnet34 and at the end JobID is your job id. 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/manifold/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train cutmix --cutmix_prob 0.4 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/manifold/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train cutmix --cutmix_prob 0.4 --job_id <JobID>
 ```
 For WideResNet-28-10:
 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train cutmix --cutmix_prob 0.4 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train cutmix --cutmix_prob 0.4 --job_id <JobID>
 ```
 <br/>
 <hr/>
@@ -134,12 +134,12 @@ For PreActResent models you can run the following command.
 
 Note: X is either preactresnet18 or preactresnet34 and at the end JobID is your job id. 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/manifold/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train cutout --cutout 16 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/manifold/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train cutout --cutout 16 --job_id <JobID>
 ```
 For WideResNet-28-10:
 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train cutout --cutout 8 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train cutout --cutout 8 --job_id <JobID>
 ```
 
 Note: For running the cutout experiment on SVHN, you should set --cutout 20
@@ -155,12 +155,12 @@ For PreActResent models you can run the following command.
 
 Note: X is either preactresnet18 or preactresnet34 and at the end JobID is your job id. 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/manifold/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train mixup --alpha 1.0 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/manifold/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train mixup --alpha 1.0 --job_id <JobID>
 ```
 For WideResNet-28-10:
 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train mixup --alpha 1.0 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train mixup --alpha 1.0 --job_id <JobID>
 ```
 <br/>
 <hr/>
@@ -174,12 +174,12 @@ For PreActResent models you can run the following command.
 
 Note: X is either preactresnet18 or preactresnet34 and at the end JobID is your job id. 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/manifold/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train dropblock --drop_block 7 --keep_prob 0.9 --drop_block_all True --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/manifold/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train dropblock --drop_block 7 --keep_prob 0.9 --drop_block_all True --job_id <JobID>
 ```
 For WideResNet-28-10:
 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train dropblock --drop_block 7 --keep_prob 0.9 --drop_block_all True --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train dropblock --drop_block 7 --keep_prob 0.9 --drop_block_all True --job_id <JobID>
 ```
 <br/>
 <hr/>
@@ -193,12 +193,12 @@ For PreActResent models you can run the following command.
 
 Note: X is either preactresnet18 or preactresnet34 and at the end JobID is your job id. 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/manifold/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train vanilla --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/manifold/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train vanilla --job_id <JobID>
 ```
 For WideResNet-28-10:
 
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train vanilla --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train vanilla --job_id <JobID>
 ```
 <br/>
 <hr/>
@@ -236,13 +236,13 @@ Note: To run the cutout experiment on SVHN, you should  also set --cutout 20
 
 First, we need to create an affine transformed test set by running the following command:
 ```
-python ./load_data.py --affine_path ./data/test/affine/
+python load_data.py --affine_path ./data/test/affine/
 ```
 We create affine transformed test set described in the paper for the CIFAR-100.
 After creating the the Deformed Images test set, 
 we can run generalization experiment on Deformed Images (affine transformed test set) with same commands to train model with a regularization technique with two more parameters. Following is one command example that is used in Soft PatchUp.
 ```
-python ./main.py --dataset cifar100 --data_dir ./data/cifar100/ --affine_test --affine_path ./data/test/affine/  --root_dir ./experiments/patchup/soft/ --labels_per_class 500 --valid_labels_per_class 50 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train patchup --alpha 2.0 --patchup_type soft --patchup_block 7 --patchup_prob 1.0 --gamma 0.25 --job_id <JobID>
+python main.py --dataset cifar100 --data_dir ./data/cifar100/ --affine_test --affine_path ./data/test/affine/  --root_dir ./experiments/patchup/soft/ --labels_per_class 500 --valid_labels_per_class 50 --arch wrn28_10  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 400 --schedule 200 300 --step_factors 0.1 0.1 --train patchup --alpha 2.0 --patchup_type soft --patchup_block 7 --patchup_prob 1.0 --gamma 0.25 --job_id <JobID>
 ```
 Note: Use the above as a pattern to create a command to run an experiment for evaluating the performance of other approaches in this task.
 <br/>
@@ -256,7 +256,7 @@ in order to see the regularized models' robustness against the FGSM attack, we c
 
 The following command runs this experiment on PreActResNet18 in CIFAR-10 with Soft PatchUp and evaluate its robustness against the FGSM attack.
 ```
-python ./main.py --dataset cifar10 --data_dir ./data/cifar10/ --fsgm_attack True --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train patchup --alpha 2.0 --patchup_type soft --patchup_block 7 --patchup_prob 1.0 --gamma 0.25 --job_id <JobID>
+python main.py --dataset cifar10 --data_dir ./data/cifar10/ --fsgm_attack True --root_dir ./experiments/patchup/soft/ --labels_per_class 5000 --valid_labels_per_class 500 --arch <X>  --learning_rate 0.1 --momentum 0.9 --decay 0.0001 --epochs 2000 --schedule 500 1000 1500 --step_factors 0.1 0.1 0.1 --train patchup --alpha 2.0 --patchup_type soft --patchup_block 7 --patchup_prob 1.0 --gamma 0.25 --job_id <JobID>
 ```
 Note: Use above as an example command for running experiment on evaluating other approaches performance.
 
