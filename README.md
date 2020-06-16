@@ -5,12 +5,12 @@
 In this work, we propose PatchUp which is a regularization technique that operates in the hidden space by masking out contiguous blocks of the feature map of a random pair of samples and either mixes (Soft PatchUp) or swaps (Hard PatchUp) these selected contiguous blocks.
 Our experiments verify that Hard PatchUp achieves a better generalization performance in comparison to other state-of-the-art regularization techniques for CNNs like Mixup, cutout, CutMix and ManifoldMixup on CIFAR-10, CIFAR-100, and SVHN datasets. Soft PatchUp provides the second-best performance on CIFAR-10, CIFAR-100 with PreactResnet18, PreactResnet34, and WideResnet-28-10 models and comparable result in SVHN with PreactResnet18, PreactResnet34 with ManifoldMixup. PatchUp provides significant improvements in the generalization on deformed images and better robustness against FGSM adversarial attack. 
 
-Yo can find further detail on PatchUp in [https://arxiv.org/](http://google.com). 
+Yo can find further detail on PatchUp in [https://arxiv.org/abs/2006.07794](https://arxiv.org/abs/2006.07794). 
 
 ### PatchUp Process:
 Following image briefly describes how PatchUp works. It is the PatchUp process for two hidden representations associated with two samples randomly selected in the minibatch (a, b). X<sub>1</sub> = g<sub>k</sub><sup>(i)</sup>(a) and X<sub>2</sub> = g<sub>k</sub><sup>(i)</sup>(b) where "i" is the feature map index. Right top shows Hard PatchUp output and the right bottom shows the interpolated samples with Soft PatchUp. The yellow continuous blocks represent the interpolated selected blocks. 
 
-(Figure 1. from the [PatchUp Paper](http://google.com).)
+(Figure 1. from the [PatchUp Paper](https://arxiv.org/abs/2006.07794).)
 <br/>
 
 ![patchup_process](https://user-images.githubusercontent.com/38594307/83678128-3b3c0000-a5ab-11ea-8f38-d919ecce8d29.png)
@@ -19,9 +19,16 @@ Following image briefly describes how PatchUp works. It is the PatchUp process f
 
 ### Citation:
 
-If you find this work useful and use it in your own research, please consider citing our [paper](http://google.com).
+If you find this work useful and use it in your own research, please consider citing our [paper](https://arxiv.org/abs/2006.07794).
 ```
-
+@misc{faramarzi2020patchup,
+    title={PatchUp: A Regularization Technique for Convolutional Neural Networks},
+    author={Mojtaba Faramarzi and Mohammad Amini and Akilesh Badrinaaraayanan and Vikas Verma and Sarath Chandar},
+    year={2020},
+    eprint={2006.07794},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
 ```
 <br/>
      
