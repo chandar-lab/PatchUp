@@ -45,7 +45,7 @@ To install the requirements you can do:
 pip install -r requirements.txt
 ```
 
-Or install the following packages manually:
+#### Or install the following packages manually:
 
 torch==1.3.1
 <br/>
