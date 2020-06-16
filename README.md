@@ -38,12 +38,41 @@ Following shows the project structure and modules and files that we have in this
 <img width="900" alt="project structure" src="https://user-images.githubusercontent.com/38594307/83950930-37eb8300-a7fc-11ea-800a-ebc03bcf41d6.jpg">
 
 ### Requirements:
-In this implementation some packages were used that you can find names and their version in the requirements.txt.
+This code has been tested with python 3.6.9. And, in this implementation some packages were used that you can find names and their version in the requirements.txt.
 To install the requirements you can do:
 
 ```
-env/bin/pip install -r requirements.txt
+pip install -r requirements.txt
 ```
+
+Or install the following packages manually:
+
+torch==1.3.1
+<br/>
+torchvision==0.4.2
+
+#### Additional Packages:
+
+scikit-learn==0.21.3
+<br/>
+scipy==1.3.1
+<br/>
+seaborn==0.9.0
+<br/>
+pandas==0.25.3
+<br/>
+psutil==5.6.7
+<br/>
+Pillow==6.2.1
+<br/>
+pathtools==0.1.2
+<br/>
+numpy==1.17.4
+<br/>
+matplotlib==3.1.1
+<br/>
+six==1.13.0
+
 
 ## How to run experiments for CIFAR
 
