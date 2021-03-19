@@ -24,7 +24,7 @@ olefile==0.46
 pandas==0.25.3
 pathtools==0.1.2
 patsy==0.5.1
-Pillow==6.2.1
+Pillow==8.1.1
 promise==2.2.1
 psutil==5.6.7
 pycparser==2.19
